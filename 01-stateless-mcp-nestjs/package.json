@@ -1,0 +1,32 @@
+{
+  "name": "stateless-mcp-nestjs",
+  "version": "1.0.0",
+  "description": "A stateless MCP server (spec 2026-07-28) on NestJS, with a two-instance round-robin test",
+  "main": "dist/src/main.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "npm run build && node dist/src/main.js",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.1.0",
+    "@modelcontextprotocol/server": "2.2.0",
+    "@nestjs/common": "12.1.1",
+    "@nestjs/core": "12.1.1",
+    "@nestjs/platform-express": "12.1.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.2.0",
+    "@types/express": "5.0.6",
+    "@types/node": "22.20.4",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
